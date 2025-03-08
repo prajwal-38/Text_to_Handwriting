@@ -1,0 +1,20 @@
+hello world ! this is me vs code i guess wtf
+ne 1078, in main
+    rv = self.invoke(ctx)
+  File "C:\Users\pwal9\anaconda3\envs\ragg\lib\site-packages\click\core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "C:\Users\pwal9\anaconda3\envs\ragg\lib\site-packages\click\core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+  File "C:\Users\pwal9\Desktop\hand\main.py", line 24, in main
+    lines = processor.process_text(text)
+  File "C:\Users\pwal9\Desktop\hand\src\text_processor.py", line 29, in process_text
+    if len(line) <= self.config['paper']['max_chars_per_line']:
+KeyError: 'max_chars_per_line'
+PS C:\Users\pwal9\Desktop\hand> python main.py -i .\requirements.txt -o output.png -s regular
+Document created: output.png
+PS C:\Users\pwal9\Desktop\hand> python main.py -i .\requirements.txt -o output.png -s regular
+Traceback (most recent call last):
+  File "C:\Users\pwal9\Desktop\hand\main.py", line 4, in <module>
+    from src.text_processor import TextProcessor
+  File "C:\Users\pwal9\Desktop\hand\src\text_processor.py", line 92
+    return formatted_lines

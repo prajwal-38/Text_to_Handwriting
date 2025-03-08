@@ -1,0 +1,33 @@
+paper:
+  template: "a4_lined.png"
+  width: 2480  #A4 at 300 DPI
+  height: 3508
+  margin_top: 200
+  margin_bottom: 200
+  margin_left: 200
+  margin_right: 200
+  line_height: 100  #Distance between lines
+
+handwriting:
+  default_font: "handwriting_regular.ttf"
+  fonts:
+    - name: "regular"
+      file: "handwriting_regular.ttf"
+    - name: "neat"
+      file: "handwriting_neat.ttf"
+    - name: "messy"
+      file: "handwriting_messy.ttf"
+  
+  #Handwriting style parameters
+  size: 60  #Font size
+  color: [0, 0, 0]  #RGB color(black)
+  variation:
+    size: 0.1  #Size variation(10%)
+    angle: 2.0  #Rotation angle variation in degrees
+    spacing: 0.2  #Character spacing variation
+    baseline: 3  #Baseline shift variation in pixels
+
+output:
+  format: "png"
+  dpi: 300
+  quality: 95  # For JPEG
