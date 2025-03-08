@@ -18,8 +18,8 @@ This tool transforms plain text into handwritten-style documents that look like 
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/handwritten-text-generator.git
-cd handwritten-text-generator
+git clone https://github.com/prajwal-38/text_to_handwriting.git
+cd text_to_handwritten
 
 # Install dependencies
 pip install -r requirements.txt
@@ -28,7 +28,7 @@ pip install -r requirements.txt
 ## Usage
 
 ```bash
-python main.py --input your_text.txt --output handwritten.png --style regular
+python main.py --input sample_txt.txt --output handwritten.png --style regular
 ```
 
 ### Options
@@ -52,7 +52,7 @@ Your Name
 ```
 
 ### Output Image
-![Sample Output](output.png)
+![Sample Output](output0.png)
 
 ## Customization
 
