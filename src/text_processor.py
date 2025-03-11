@@ -47,24 +47,33 @@ class TextProcessor:
         formatted_lines = []
         
         for line in lines:
-            chars = list(line)
+            words = line.split()
             formatted_line = ""
-            
-            for i, char in enumerate(chars):
-                formatted_line += char
-                if i < len(chars) - 1 and chars[i+1] not in ".,;:!?)'\"":
-                    next_char = chars[i+1]
-                    tight_pairs = ['th', 'he', 'in', 'er', 'an', 're', 'on', 'at', 'en', 'nd', 'ti', 'es', 'or']
-                    wide_pairs = ['ow', 'av', 'wa', 'we', 'wo', 'yo', 'yo']
+
+            for word_idx, word in enumerate(words):
+                chars = list(word)
+                formatted_word = ""
+                for i, char in enumerate(chars):
+                    formatted_word += char
+                    if i < len(chars) - 1 and chars[i+1] not in ".,;:!?)'\"":
+                        next_char = chars[i+1]
+                        
+                        tight_pairs = ['th', 'he', 'in', 'er', 'an', 're', 'on', 'at', 'en', 'nd', 'ti', 'es', 'or']
+                        wide_pairs = ['ow', 'av', 'wa', 'we', 'wo', 'yo', 'yo']
+                        
+                        pair = char + next_char
+                        if pair.lower() in tight_pairs:
+                            pass
+                        elif pair.lower() in wide_pairs:
+                            formatted_word += " " * random.randint(0, 1)
+                        else:
+                            if random.random() < 0.2:
+                                formatted_word += " " * random.randint(0, 1)
                     
-                    pair = char + next_char
-                    if pair.lower() in tight_pairs:
-                        pass
-                    elif pair.lower() in wide_pairs:
-                        formatted_line += " " * random.randint(0, 1)
-                    else:
-                        if random.random() < 0.2:
-                            formatted_line += " " * random.randint(0, 1)
+                formatted_line += formatted_word
+                if word_idx < len(words) - 1:
+                    formatted_line += " " * random.randint(3, 5)
+            
             formatted_lines.append(formatted_line)
-    
+        
         return formatted_lines

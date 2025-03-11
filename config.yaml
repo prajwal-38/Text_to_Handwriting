@@ -6,7 +6,7 @@ paper:
   margin_bottom: 200
   margin_left: 370
   margin_right: 200
-  line_height: 90  #Distance between lines
+  line_height: 95 #Distance between lines
 
 handwriting:
   default_font: "handwriting_regular.ttf"
