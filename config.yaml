@@ -1,12 +1,12 @@
 paper:
-  template: "a4_lined.png"
-  width: 2480  #A4 at 300 DPI
-  height: 3508
-  margin_top: 200
+  template: "001.jpg"
+  width: 2300  #A4 at 300 DPI
+  height: 3300
+  margin_top: 300
   margin_bottom: 200
-  margin_left: 200
+  margin_left: 370
   margin_right: 200
-  line_height: 100  #Distance between lines
+  line_height: 90  #Distance between lines
 
 handwriting:
   default_font: "handwriting_regular.ttf"
@@ -24,7 +24,7 @@ handwriting:
   variation:
     size: 0.1  #Size variation(10%)
     angle: 2.0  #Rotation angle variation in degrees
-    spacing: 0.2  #Character spacing variation
+    spacing: 0.1  #Character spacing variation
     baseline: 3  #Baseline shift variation in pixels
 
 output:
